@@ -1,0 +1,134 @@
+<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alex Smith | Graphic Designer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Global Styles */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: #ffffff; color: #2B2B2B; line-height: 1.6; overflow-x: hidden; }
+
+        /* Header */
+        .header { position: fixed; width: 100%; padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; background: rgba(255, 255, 255, 0.95); box-shadow: 0 2px 10px rgba(0,0,0,0.1); z-index: 1000; }
+        .logo { font-size: 1.8rem; font-weight: 700; color: #FF4D4D; }
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: #2B2B2B; font-weight: 500; transition: color 0.3s; }
+        .nav-links a:hover { color: #FF4D4D; }
+        .menu-toggle { display: none; font-size: 1.8rem; cursor: pointer; }
+
+        /* Hero Section */
+        .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 0 5%; background: url('https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg') center/cover; color: white; }
+        .hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
+        .cta-btn { background: #FF4D4D; color: white; padding: 12px 24px; text-decoration: none; font-weight: 600; border-radius: 5px; transition: 0.3s; }
+        .cta-btn:hover { background: #FF2D2D; }
+
+        /* Portfolio */
+        .portfolio { padding: 6rem 5%; background: #f8f9fa; text-align: center; }
+        .portfolio h2 { font-size: 2.5rem; margin-bottom: 2rem; }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .portfolio-item { background: white; padding: 1rem; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: 0.3s; }
+        .portfolio-item:hover { transform: translateY(-5px); }
+        .portfolio-item img { width: 100%; border-radius: 10px; }
+
+        /* About */
+        .about { padding: 6rem 5%; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 3rem; }
+        .about img { width: 100%; max-width: 400px; border-radius: 10px; }
+        .about-text { max-width: 500px; text-align: center; }
+        .about h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+
+        /* Contact */
+        .contact { padding: 6rem 5%; background: #2B2B2B; color: white; text-align: center; }
+        .contact h2 { font-size: 2.5rem; margin-bottom: 2rem; }
+        .contact-form { max-width: 500px; margin: auto; }
+        .form-group { margin-bottom: 1rem; }
+        input, textarea { width: 100%; padding: 1rem; border-radius: 5px; border: none; }
+        button { background: #FF4D4D; color: white; padding: 12px 24px; border: none; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+        button:hover { background: #FF2D2D; }
+
+        /* Footer */
+        .footer { background: #1a1a1a; color: #fff; text-align: center; padding: 3rem 5%; }
+        .social-links a { color: white; font-size: 1.5rem; margin: 0 10px; text-decoration: none; }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .menu-toggle { display: block; }
+            .nav-links { display: none; flex-direction: column; position: absolute; top: 60px; right: 5%; background: white; padding: 1rem; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); }
+            .nav-links.active { display: flex; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#" class="logo">AlexSmith</a>
+        <nav class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div>
+            <h1>Transform Ideas Into Visual Masterpieces</h1>
+            <p>Creative graphic designer specializing in brand identity & digital experiences.</p>
+            <a href="#portfolio" class="cta-btn">Explore Work</a>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://images.pexels.com/photos/8384133/pexels-photo-8384133.jpeg" alt="Brand Identity">
+                <h3>Modern Branding</h3>
+            </div>
+            <div class="portfolio-item">
+                <img src="Bin.jpg" alt="Packaging Design">
+                <h3>Product Packaging</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <img src="https://images.pexels.com/photos/3760263/pexels-photo-3760263.jpeg" alt="About Me">
+        <div class="about-text">
+            <h2>Creative Visionary</h2>
+            <p>With a decade of experience transforming brands through strategic design, I create impactful visual solutions.</p>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <h2>Let's Create</h2>
+        <form class="contact-form">
+            <div class="form-group"><input type="text" placeholder="Name" required></div>
+            <div class="form-group"><input type="email" placeholder="Email" required></div>
+            <div class="form-group"><textarea placeholder="Your Vision..." required></textarea></div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Alex Smith. Crafted with passion.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', () => {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+
+</body>
+</html>
